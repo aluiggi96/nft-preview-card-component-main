@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+html{
+    font-family: Outfit, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+body{
+    background-color: hsl(217, 54%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fullViewCard{
+    margin: 3rem 1rem;
+    background-color: hsl(216, 50%, 16%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    max-width: 375px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2rem 1rem hsl(216, 50%, 8%), 0 0 6rem hsl(215, 32%, 5%);
+}
+.NFT{
+    position: relative;
+    width: 100%;
+}
+.cryptoPic{
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.overlay{
+    inset: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    background-color: hsl(216, 50%, 16%);
+    transition: 500ms linear;
+    opacity: 0;
+    border-radius: 1rem;
+}
+.overlay img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.NFT:hover .overlay{
+    cursor: pointer;
+    opacity: .5;
+}
+.nameNFT{
+    transition: color 500ms linear;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.nameNFT:hover{
+    color: hsl(178, 100%, 50%);
+}
+.description{
+    text-align: center;
+    color: hsl(215, 51%, 70%);
+}
+.valueNDays{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    display: flex;
+    justify-content: space-between;
+}
+.valueSide, .daysSide{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    gap: .5rem;
+    font-size: 1rem;
+}
+.valueSide{
+    font-weight: 400;
+    color: hsl(178, 100%, 50%);
+}
+.credit{
+    font-size: .75rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    color: hsl(215, 51%, 70%);
+}
+.name{
+    cursor: pointer;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+    transition: color 500ms linear;
+}
+.name:hover{
+    color: hsl(178, 100%, 50%);
+}
+.credit img{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 32px;
+}
